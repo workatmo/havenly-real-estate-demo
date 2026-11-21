@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10251d">
+  <meta name="description" content="Discover exceptional homes and prime locations with Havenly. Find your next home with a better, more personal property experience.">
+  <title>Havenly — Find your place in the world</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Havenly home"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 14.5 16 4l12 10.5M8 12v15h16V12M13 27v-9h6v9"/></svg><span>Havenly</span></a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    <nav class="main-nav" aria-label="Main navigation"><a class="active" href="#home">Home</a><a href="#properties">Properties</a><a href="#about">About</a><a href="#testimonials">Testimonials</a><a href="#journal">Journal</a></nav>
+    <a class="button button-dark header-cta" href="#properties">Browse Properties <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-image" role="img" aria-label="Contemporary glass villa beside a reflecting pool at sunset"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content wrap">
+        <span class="eyebrow"><i>✳</i> Find your dream home</span>
+        <h1>Discover Your<br>Perfect <em>Home</em></h1>
+        <p>Modern properties. Prime locations.<br>A better way to find your next home.</p>
+        <div class="hero-actions"><a class="button button-dark" href="#properties">Browse Properties <span>↗</span></a><a class="watch-link" href="#about"><span class="play">▶</span> Watch our story</a></div>
+      </div>
+      <div class="search-panel wrap" aria-label="Property search">
+        <label class="search-field"><span class="field-icon">⌖</span><span><small>Location</small><select id="location"><option value="all">Any location</option><option>Casablanca</option><option>Rabat</option><option>Marrakech</option></select></span></label>
+        <label class="search-field"><span class="field-icon">⌂</span><span><small>Property type</small><select id="type"><option value="all">Any type</option><option>Villa</option><option>Apartment</option><option>Family home</option></select></span></label>
+        <label class="search-field"><span class="field-icon">◆</span><span><small>Price range</small><select id="price"><option value="all">Any price</option><option value="under-300">Under $300k</option><option value="300-500">$300k–$500k</option><option value="over-500">Over $500k</option></select></span></label>
+        <button class="button button-dark search-button" id="search-button"><span class="search-icon">⌕</span> Search</button>
+      </div>
+    </section>
+
+    <section class="about-section wrap" id="about">
+      <div class="about-photo"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=85" alt="Sunlit modern living room opening to a private garden" loading="lazy"><span class="photo-stamp">A place<br>to belong</span></div>
+      <div class="about-copy"><span class="eyebrow"><i>✳</i> About Havenly</span><h2>More Than Just<br>Real Estate</h2><p>We’re here to make your property journey simple, smooth and successful. With years of experience and a passion for real estate, we help you find more than a house — we help you find home.</p><a class="button button-dark" href="#journal">Our story <span>↗</span></a></div>
+      <div class="promise-list"><article><span class="promise-icon">⌂</span><div><h3>Trusted Agency</h3><p>Your satisfaction is our priority.</p></div></article><article><span class="promise-icon">♢</span><div><h3>Secure Transactions</h3><p>Buy and sell with confidence.</p></div></article><article><span class="promise-icon">◌</span><div><h3>Dedicated Support</h3><p>We’re here for you, always.</p></div></article></div>
+    </section>
+
+    <section class="properties-section wrap" id="properties">
+      <div class="section-heading"><div><span class="eyebrow"><i>✳</i> Our properties</span><h2>Featured Properties</h2><p>Explore our handpicked selection of premium properties.</p></div><div class="carousel-controls"><button aria-label="Previous properties" id="prev-cards">←</button><button aria-label="Next properties" id="next-cards">→</button></div></div>
+      <div class="property-grid" id="property-grid">
+        <article class="property-card" data-location="Casablanca" data-type="Villa" data-price="450000"><div class="property-image"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85" alt="Modern villa with pool and palm trees" loading="lazy"><span class="status">For Sale</span><button class="save-button" aria-label="Save Modern Villa">♡</button></div><div class="property-info"><div class="property-title"><h3>Modern Villa</h3><span>Casablanca</span></div><div class="property-specs"><span>▦ 4 Beds</span><span>♧ 3 Baths</span><span>◩ 320 m²</span></div><div class="property-bottom"><strong>$450,000</strong><a href="mailto:hello@havenly.example?subject=Modern%20Villa%20in%20Casablanca" aria-label="Ask about Modern Villa">↗</a></div></div></article>
+        <article class="property-card" data-location="Rabat" data-type="Apartment" data-price="280000"><div class="property-image"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85" alt="Luxury apartment building with balconies" loading="lazy"><span class="status">For Sale</span><button class="save-button" aria-label="Save Luxury Apartment">♡</button></div><div class="property-info"><div class="property-title"><h3>Luxury Apartment</h3><span>Rabat</span></div><div class="property-specs"><span>▦ 3 Beds</span><span>♧ 2 Baths</span><span>◩ 150 m²</span></div><div class="property-bottom"><strong>$280,000</strong><a href="mailto:hello@havenly.example?subject=Luxury%20Apartment%20in%20Rabat" aria-label="Ask about Luxury Apartment">↗</a></div></div></article>
+        <article class="property-card" data-location="Marrakech" data-type="Family home" data-price="620000"><div class="property-image"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85" alt="Warm contemporary family home surrounded by greenery" loading="lazy"><span class="status">For Sale</span><button class="save-button" aria-label="Save Family Home">♡</button></div><div class="property-info"><div class="property-title"><h3>Garden Family Home</h3><span>Marrakech</span></div><div class="property-specs"><span>▦ 5 Beds</span><span>♧ 4 Baths</span><span>◩ 420 m²</span></div><div class="property-bottom"><strong>$620,000</strong><a href="mailto:hello@havenly.example?subject=Garden%20Family%20Home" aria-label="Ask about Garden Family Home">↗</a></div></div></article>
+      </div>
+      <p class="empty-state" id="empty-state" hidden>No homes match those filters yet. Try a wider search.</p>
+      <div class="center-action"><a class="button button-outline" href="#properties">Explore all properties <span>↗</span></a></div>
+    </section>
+
+    <section class="testimonials-section wrap" id="testimonials"><div class="testimonial-intro"><span class="eyebrow"><i>✳</i> Testimonials</span><h2>What Our Clients Say</h2><p>Real stories from happy homeowners.</p><a class="button button-dark" href="mailto:hello@havenly.example">Read more reviews <span>↗</span></a></div><article class="quote-card"><div class="quote-mark">“</div><p>Havenly made the entire process smooth and stress-free. Highly recommended!</p><div class="reviewer"><span class="avatar avatar-one">S</span><div><strong>Sarah El Mansouri</strong><small>Casablanca</small></div><span class="stars">★★★★★</span></div></article><article class="quote-card"><div class="quote-mark">“</div><p>Professional, responsive and truly dedicated. We found our dream home!</p><div class="reviewer"><span class="avatar avatar-two">K</span><div><strong>Karim Benali</strong><small>Rabat</small></div><span class="stars">★★★★★</span></div></article><article class="quote-card"><div class="quote-mark">“</div><p>An exceptional experience from start to finish. We couldn’t be happier.</p><div class="reviewer"><span class="avatar avatar-three">F</span><div><strong>Fatima Zahra</strong><small>Marrakech</small></div><span class="stars">★★★★★</span></div></article></section>
+
+    <section class="journal-strip wrap" id="journal"><div><span class="eyebrow"><i>✳</i> The Havenly journal</span><h2>Good places make<br>great beginnings.</h2></div><a class="button button-light" href="mailto:hello@havenly.example">Talk to our team <span>↗</span></a></section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-main wrap"><div class="footer-brand"><a class="brand brand-light" href="#home"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 14.5 16 4l12 10.5M8 12v15h16V12M13 27v-9h6v9"/></svg><span>Havenly</span></a><p>Building better tomorrows,<br>one home at a time.</p><div class="social-links"><a href="#footer" aria-label="Instagram">◎</a><a href="#footer" aria-label="Facebook">f</a><a href="#footer" aria-label="YouTube">▶</a><a href="#footer" aria-label="LinkedIn">in</a></div></div><div class="footer-column"><h3>Quick Links</h3><a href="#home">Home</a><a href="#properties">Properties</a><a href="#about">About</a><a href="#testimonials">Testimonials</a><a href="#journal">Journal</a></div><div class="footer-column"><h3>Property Types</h3><a href="#properties">Villas</a><a href="#properties">Apartments</a><a href="#properties">Houses</a><a href="#properties">Land</a><a href="#properties">Commercial</a></div><div class="footer-news"><h3>Stay in the know</h3><p>Get the latest properties and real estate tips.</p><form id="newsletter-form"><label class="visually-hidden" for="email">Your email address</label><input id="email" type="email" placeholder="Your email address" required><button aria-label="Subscribe">→</button></form><small id="newsletter-message">A little inspiration, delivered occasionally.</small></div></div><div class="footer-bottom wrap"><span>© <span id="year">2026</span> Havenly. All rights reserved.</span><div><a href="#footer">Privacy Policy</a><a href="#footer">Terms of Service</a></div></div></footer>
+</body>
+</html>
