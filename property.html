@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10251d">
+  <meta name="description" content="Explore this exceptional Havenly property, view its features and request a private tour.">
+  <title>Property details | Havenly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root{--detail-ink:#14231d;--detail-forest:#10271e;--detail-cream:#f7f3ee;--detail-paper:#fffdfa;--detail-sand:#e9dfd3;--detail-gold:#c7a879;--detail-muted:#77756f}
+    body{background:var(--detail-cream)}
+    .detail-page{color:var(--detail-ink);padding-bottom:64px}
+    .detail-wrap{width:min(1200px,calc(100% - 48px));margin-inline:auto}
+    .detail-top{padding:22px 0 18px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .detail-brand{display:flex;align-items:center;gap:10px;color:var(--detail-forest);text-decoration:none;font:600 23px 'Playfair Display',Georgia,serif}
+    .detail-brand svg{width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+    .detail-links{display:flex;gap:28px;align-items:center;font-size:13px}
+    .detail-links a{color:var(--detail-ink);text-decoration:none}.detail-links a:hover{color:#92734b}
+    .detail-home{border:1px solid #d9cdbd;border-radius:999px;padding:11px 17px;font-weight:600}
+    .detail-crumb{padding:18px 0 20px;color:#79766f;font-size:12px;letter-spacing:.06em;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+    .detail-crumb a{color:inherit;text-decoration:none}.detail-crumb i{font-style:normal;color:#b29a79}
+    .detail-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;margin-bottom:23px}
+    .detail-kicker{margin:0 0 8px;color:#8e7655;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+    .detail-heading h1{font:500 clamp(32px,4vw,49px)/1.08 'Playfair Display',Georgia,serif;margin:0;color:var(--detail-forest)}
+    .detail-location{margin:10px 0 0;color:#696c65;font-size:14px}
+    .detail-location svg{width:15px;height:15px;vertical-align:-3px;margin-right:5px;stroke:#9b805a;fill:none;stroke-width:1.7}
+    .detail-status{white-space:nowrap;background:#e8efe8;color:#365842;border-radius:999px;padding:9px 14px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+    .detail-gallery{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(220px,.8fr);grid-template-rows:250px 250px;gap:10px;border-radius:17px;overflow:hidden}
+    .detail-main-photo{grid-row:1/3;position:relative;min-width:0;overflow:hidden;background:#ddd}
+    .detail-main-photo img,.detail-side-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s ease}
+    .detail-main-photo:hover img,.detail-side-photo:hover img{transform:scale(1.025)}
+    .detail-main-photo:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(10,24,17,.52));pointer-events:none}
+    .detail-photo-caption{position:absolute;z-index:1;left:23px;bottom:19px;color:white;font-size:12px;letter-spacing:.04em}
+    .detail-side-photo{position:relative;overflow:hidden;background:#ddd}
+    .detail-photo-count{position:absolute;right:13px;bottom:13px;border:0;border-radius:999px;background:#fffdfa;color:#1e2c23;padding:10px 13px;font:600 11px 'DM Sans',Arial,sans-serif;cursor:pointer;box-shadow:0 4px 18px #0002}
+    .detail-photo-count:hover{background:white}
+    .detail-summary{display:flex;align-items:center;gap:0;margin:18px 0 35px;padding:17px 0;border-bottom:1px solid #e3d9cc;border-top:1px solid #e3d9cc}
+    .detail-stat{flex:1;text-align:center;border-right:1px solid #e5dbcf;padding:4px 10px}.detail-stat:first-child{text-align:left;padding-left:2px}.detail-stat:last-child{border:0;text-align:right;padding-right:2px}
+    .detail-stat strong{display:block;font:500 19px 'Playfair Display',Georgia,serif;color:#183528}.detail-stat span{display:block;margin-top:4px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#858078}
+    .detail-grid{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:50px;align-items:start}
+    .detail-content section{padding:0 0 30px;margin:0 0 29px;border-bottom:1px solid #e3d9cc;scroll-margin-top:24px}
+    .detail-content h2{font:500 27px 'Playfair Display',Georgia,serif;color:var(--detail-forest);margin:0 0 14px}
+    .detail-copy{max-width:720px;color:#65665f;font-size:14px;line-height:1.85;margin:0}
+    .detail-highlights{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:22px}
+    .detail-highlight{background:#fffdfa;border:1px solid #eee5da;border-radius:10px;padding:15px 16px;display:flex;gap:12px;align-items:flex-start}
+    .detail-highlight svg{width:19px;height:19px;flex:none;stroke:#a38458;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-top:1px}
+    .detail-highlight strong{display:block;font-size:12px;color:#26382e}.detail-highlight span{display:block;margin-top:4px;color:#858078;font-size:11px;line-height:1.5}
+    .detail-amenities{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px 18px;padding:0;margin:18px 0 0;list-style:none}
+    .detail-amenities li{display:flex;align-items:center;gap:9px;font-size:12px;color:#5e625c}.detail-amenities svg{width:16px;height:16px;stroke:#8c9a85;fill:none;stroke-width:1.8}
+    .detail-note{display:flex;gap:14px;align-items:flex-start;background:#f0ebe3;border-radius:12px;padding:17px 18px;color:#62635c;font-size:12px;line-height:1.7}
+    .detail-note svg{width:20px;height:20px;flex:none;stroke:#9a7c53;fill:none;stroke-width:1.6}
+    .detail-card{position:sticky;top:24px;background:var(--detail-paper);border:1px solid #ece3d9;border-radius:15px;padding:23px;box-shadow:0 14px 40px #2d281b0a}
+    .detail-price-label{font-size:10px;color:#858078;text-transform:uppercase;letter-spacing:.15em;font-weight:700}.detail-price{margin:6px 0 4px;color:#173529;font:500 33px 'Playfair Display',Georgia,serif}.detail-subprice{font-size:11px;color:#88847b;border-bottom:1px solid #eee6dc;padding-bottom:17px}
+    .detail-card h3{font:500 18px 'Playfair Display',Georgia,serif;margin:18px 0 14px;color:#21392d}
+    .detail-form{display:grid;gap:10px}.detail-form label{font-size:11px;color:#696c65;display:grid;gap:6px}.detail-form input,.detail-form textarea{width:100%;border:1px solid #e3dbd0;border-radius:7px;background:#fffefa;padding:11px 12px;color:#203127;font:13px 'DM Sans',Arial,sans-serif;outline:none}.detail-form input:focus,.detail-form textarea:focus{border-color:#b39468;box-shadow:0 0 0 3px #c7a87922}.detail-form textarea{min-height:74px;resize:vertical}
+    .detail-submit{border:0;border-radius:7px;background:var(--detail-forest);color:white;padding:13px 16px;font:600 12px 'DM Sans',Arial,sans-serif;cursor:pointer;margin-top:3px;transition:background .2s}.detail-submit:hover{background:#284d38}
+    .detail-privacy{margin:10px 0 0;color:#8a867e;font-size:10px;line-height:1.5;text-align:center}
+    .detail-divider{height:1px;background:#eee6dc;margin:19px 0 15px}.detail-calc-title{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#77736c}.detail-calc{display:flex;justify-content:space-between;align-items:baseline;margin-top:9px}.detail-calc strong{font:500 20px 'Playfair Display',Georgia,serif;color:#233c2e}.detail-calc span{font-size:10px;color:#8a867e}.detail-calc-note{font-size:10px;color:#8a867e;line-height:1.5;margin:5px 0 0}
+    .detail-related{margin-top:7px}.detail-related h2{font:500 25px 'Playfair Display',Georgia,serif;margin:0 0 17px;color:#183528}.detail-choices{display:flex;flex-wrap:wrap;gap:9px}.detail-choices a{padding:10px 13px;border:1px solid #ded3c6;border-radius:999px;text-decoration:none;color:#445146;font-size:11px}.detail-choices a:hover,.detail-choices a[aria-current="page"]{background:#173529;color:white;border-color:#173529}
+    .detail-footer{background:#10271e;color:#f7f3ee;padding:22px 0;margin-top:48px}.detail-footer .detail-wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:11px}.detail-footer a{color:#f7f3ee;text-decoration:none}
+    @media(max-width:900px){.detail-gallery{grid-template-rows:210px 210px}.detail-grid{grid-template-columns:minmax(0,1fr) 300px;gap:28px}.detail-card{padding:20px}.detail-amenities{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:700px){.detail-wrap{width:min(100% - 32px,600px)}.detail-top{padding:16px 0}.detail-links{gap:13px}.detail-links a:not(.detail-home){display:none}.detail-home{padding:9px 13px;font-size:11px}.detail-crumb{padding:17px 0}.detail-heading{align-items:flex-start;flex-direction:column;margin-bottom:17px}.detail-status{font-size:10px;padding:8px 12px}.detail-gallery{grid-template-columns:1fr 1fr;grid-template-rows:240px 115px;gap:7px;border-radius:12px}.detail-main-photo{grid-column:1/3;grid-row:1}.detail-side-photo{grid-row:2}.detail-photo-caption{left:15px;bottom:13px}.detail-photo-count{right:8px;bottom:8px;padding:8px 10px}.detail-summary{margin:14px 0 28px;padding:14px 0}.detail-stat{padding:4px 6px}.detail-stat strong{font-size:16px}.detail-stat span{font-size:8px;letter-spacing:.06em}.detail-grid{grid-template-columns:1fr;gap:22px}.detail-card{position:static;grid-row:1}.detail-content{grid-row:2}.detail-highlights{grid-template-columns:1fr 1fr}.detail-amenities{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px 10px}.detail-footer .detail-wrap{align-items:flex-start;flex-direction:column;gap:8px}}
+    @media(max-width:420px){.detail-gallery{grid-template-rows:205px 95px}.detail-highlights{grid-template-columns:1fr}.detail-stat strong{font-size:14px}.detail-stat span{font-size:7px}}
+    @media(prefers-reduced-motion:reduce){.detail-main-photo img,.detail-side-photo img,.detail-submit{transition:none}}
+  </style>
+</head>
+<body>
+  <div class="detail-page">
+    <header class="detail-wrap detail-top">
+      <a class="detail-brand" href="index.html" aria-label="Havenly home"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 14.5 16 4l12 10.5M8 12v15h16V12M13 27v-9h6v9"/></svg><span>Havenly</span></a>
+      <nav class="detail-links" aria-label="Property navigation"><a href="index.html#properties">Properties</a><a href="index.html#about">About Havenly</a><a class="detail-home" href="index.html#footer">Talk to our team ↗</a></nav>
+    </header>
+    <main class="detail-wrap">
+      <nav class="detail-crumb" aria-label="Breadcrumb"><a href="index.html">Home</a><i>/</i><a href="index.html#properties">Properties</a><i>/</i><span id="crumb-name">Property details</span></nav>
+      <div class="detail-heading">
+        <div><p class="detail-kicker">Havenly collection · For sale</p><h1 id="property-title">Modern Villa</h1><p class="detail-location"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><span id="property-location">Casablanca, Morocco</span></p></div>
+        <span class="detail-status">For sale</span>
+      </div>
+      <section class="detail-gallery" aria-label="Property photo gallery">
+        <figure class="detail-main-photo"><img id="main-photo" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1500&q=88" alt="Modern villa with a warm stone facade and landscaped garden"><figcaption class="detail-photo-caption">A considered home, made for living well</figcaption></figure>
+        <div class="detail-side-photo"><img id="side-photo-one" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85" alt="Light-filled contemporary living room"></div>
+        <div class="detail-side-photo"><img id="side-photo-two" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85" alt="Calm modern interior with natural finishes"><button class="detail-photo-count" type="button" id="view-gallery">View all photos ↗</button></div>
+      </section>
+      <div class="detail-summary" aria-label="Property highlights">
+        <div class="detail-stat"><strong id="summary-beds">4</strong><span>Bedrooms</span></div><div class="detail-stat"><strong id="summary-baths">3</strong><span>Bathrooms</span></div><div class="detail-stat"><strong id="summary-area">320 m²</strong><span>Interior</span></div><div class="detail-stat"><strong id="summary-type">Villa</strong><span>Property type</span></div>
+      </div>
+      <div class="detail-grid">
+        <div class="detail-content">
+          <section id="overview"><p class="detail-kicker">A place to belong</p><h2>Thoughtfully designed for everyday life.</h2><p class="detail-copy" id="property-description">A peaceful, sunlit home where considered architecture meets an easy indoor-outdoor rhythm. Generous living spaces open toward a private garden, while warm natural textures bring a quiet sense of character to every room. Set in a sought-after Casablanca neighbourhood, this is a home to settle into and make your own.</p>
+            <div class="detail-highlights"><div class="detail-highlight"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 3l9 8v10H3zM9 21v-6h6v6"/></svg><div><strong>Private garden</strong><span>A leafy outdoor retreat for slow mornings and long evenings.</span></div></div><div class="detail-highlight"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V7l8-4 8 4v13M8 20v-7h8v7M8 8h.01M12 8h.01M16 8h.01"/></svg><div><strong>Made for gathering</strong><span>Open living and dining areas with a natural, welcoming flow.</span></div></div><div class="detail-highlight"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18h18M5 18V9h14v9M8 9V5h8v4M8 13h.01M12 13h.01M16 13h.01"/></svg><div><strong>Quiet neighbourhood</strong><span>Everyday essentials and favourite local spots close at hand.</span></div></div><div class="detail-highlight"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><strong>Ready to move in</strong><span>Carefully maintained and ready for its next chapter.</span></div></div></div>
+          </section>
+          <section id="features"><p class="detail-kicker">The details</p><h2>Comfort in all the right places.</h2><p class="detail-copy">A thoughtful mix of practical features and small luxuries gives this home its easy, liveable feel.</p><ul class="detail-amenities"><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Private outdoor space</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Covered parking</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Fitted kitchen</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Built-in storage</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Air conditioning</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Natural light throughout</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Secure entry</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Outdoor dining area</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Landscaped grounds</li>
+          </ul></section>
+          <section id="location-section"><p class="detail-kicker">The neighbourhood</p><h2>Well connected. Wonderfully local.</h2><p class="detail-copy" id="neighborhood-copy">A relaxed residential pocket of Casablanca, with cafés, markets, schools and daily essentials within easy reach. Enjoy a little breathing room at home while staying connected to the energy of the city.</p></section>
+          <div class="detail-note"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><span>Property information is provided as a guide. Our local team can share the latest availability, floor plans and viewing times.</span></div>
+        </div>
+        <aside class="detail-card" aria-label="Request property information">
+          <span class="detail-price-label">Asking price</span><p class="detail-price" id="property-price">$450,000</p><div class="detail-subprice" id="price-per-area">Approx. $1,406 / m²</div>
+          <h3>Make this home yours.</h3>
+          <form class="detail-form" id="tour-form">
+            <label for="visitor-name">Your name<input id="visitor-name" name="name" autocomplete="name" placeholder="Full name" required></label>
+            <label for="visitor-email">Email address<input id="visitor-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></label>
+            <label for="visitor-message">A note for our team<textarea id="visitor-message" name="message">I'd like to arrange a private viewing.</textarea></label>
+            <button class="detail-submit" type="submit">Request a private tour ↗</button>
+          </form>
+          <p class="detail-privacy">Your details go directly to our local property team.</p>
+          <div class="detail-divider"></div><span class="detail-calc-title">Illustrative monthly payment</span><div class="detail-calc"><strong id="monthly-estimate">$2,159</strong><span>per month</span></div><p class="detail-calc-note">Estimated with 20% down, 6% annual interest and a 30-year term. For illustration only.</p>
+        </aside>
+      </div>
+      <section class="detail-related" aria-label="More featured properties"><h2>Explore more of Havenly</h2><div class="detail-choices" id="property-choices"></div></section>
+    </main>
+    <footer class="detail-footer"><div class="detail-wrap"><span>© 2026 Havenly. All rights reserved.</span><a href="index.html#footer">Speak with our team ↗</a></div></footer>
+  </div>
+  <script>
+    (() => {
+      const listings = {
+        'modern-villa': {title:'Modern Villa',city:'Casablanca',type:'Villa',price:450000,beds:4,baths:3,area:320,hero:'photo-1600585154340-be6161a56a0c',side1:'photo-1600607687920-4e2a09cf159d',side2:'photo-1600566753086-00f18fb6b3ea',alt:'Modern villa with a warm stone facade and landscaped garden',description:'A peaceful, sunlit home where considered architecture meets an easy indoor-outdoor rhythm. Generous living spaces open toward a private garden, while warm natural textures bring a quiet sense of character to every room. Set in a sought-after Casablanca neighbourhood, this is a home to settle into and make your own.',neighborhood:'A relaxed residential pocket of Casablanca, with cafés, markets, schools and daily essentials within easy reach. Enjoy a little breathing room at home while staying connected to the energy of the city.'},
+        'luxury-apartment': {title:'Luxury Apartment',city:'Rabat',type:'Apartment',price:280000,beds:3,baths:2,area:150,hero:'photo-1600607687920-4e2a09cf159d',side1:'photo-1600566753086-00f18fb6b3ea',side2:'photo-1600607687939-ce8a6c25118c',alt:'Elegant contemporary apartment with a bright open-plan interior',description:'A polished city retreat with a bright, open-plan living space and a calm, refined palette. Thoughtful proportions, generous natural light and quality finishes make this apartment feel both special and effortless. Close to the best of Rabat, it is an ideal base for city living.',neighborhood:'Enjoy the convenience of a well-connected Rabat address, with local cafés, green spaces and essential services nearby. The city’s cultural destinations and everyday amenities are within comfortable reach.'},
+        'garden-family-home': {title:'Garden Family Home',city:'Marrakech',type:'Family home',price:620000,beds:5,baths:4,area:420,hero:'photo-1600566753086-00f18fb6b3ea',side1:'photo-1600585154340-be6161a56a0c',side2:'photo-1600607687920-4e2a09cf159d',alt:'Spacious family home surrounded by greenery',description:'Room to grow, room to gather and room to slow down. This welcoming family home pairs generous interiors with a leafy outdoor setting, creating a lovely balance between shared moments and quiet corners. Thoughtfully maintained and ready for its next chapter in Marrakech.',neighborhood:'Set in a welcoming Marrakech neighbourhood with the comforts of daily life close by. Shops, schools and local favourites are easy to reach, with the city’s distinctive energy never far away.'}
+      };
+      const money = value => '$' + Math.round(value).toLocaleString('en-US');
+      const selected = new URLSearchParams(location.search).get('home');
+      const id = listings[selected] ? selected : 'modern-villa';
+      const home = listings[id];
+      const photo = (key,w=1200) => `https://images.unsplash.com/${key}?auto=format&fit=crop&w=${w}&q=88`;
+      document.title = `${home.title} in ${home.city} | Havenly`;
+      document.getElementById('crumb-name').textContent = home.title;
+      document.getElementById('property-title').textContent = home.title;
+      document.getElementById('property-location').textContent = `${home.city}, Morocco`;
+      document.getElementById('property-description').textContent = home.description;
+      document.getElementById('neighborhood-copy').textContent = home.neighborhood;
+      document.getElementById('summary-beds').textContent = home.beds;
+      document.getElementById('summary-baths').textContent = home.baths;
+      document.getElementById('summary-area').textContent = `${home.area} m²`;
+      document.getElementById('summary-type').textContent = home.type;
+      document.getElementById('property-price').textContent = money(home.price);
+      document.getElementById('price-per-area').textContent = `Approx. ${money(home.price / home.area)} / m²`;
+      const principal = home.price * .8, monthlyRate = .06 / 12, months = 360;
+      document.getElementById('monthly-estimate').textContent = money(principal * monthlyRate / (1 - Math.pow(1 + monthlyRate, -months)));
+      const hero = document.getElementById('main-photo');
+      hero.src = photo(home.hero,1500); hero.alt = home.alt;
+      document.getElementById('side-photo-one').src = photo(home.side1,900);
+      document.getElementById('side-photo-two').src = photo(home.side2,900);
+      const choices = document.getElementById('property-choices');
+      Object.entries(listings).forEach(([key,item]) => {
+        const link = document.createElement('a');
+        link.href = `property.html?home=${key}`;
+        link.textContent = `${item.title} · ${item.city}`;
+        if (key === id) link.setAttribute('aria-current','page');
+        choices.appendChild(link);
+      });
+      document.getElementById('view-gallery').addEventListener('click', () => document.getElementById('overview').scrollIntoView({behavior:'smooth'}));
+      document.getElementById('tour-form').addEventListener('submit', event => {
+        event.preventDefault();
+        const form = new FormData(event.currentTarget);
+        const subject = `Private viewing request: ${home.title} in ${home.city}`;
+        const body = `Name: ${form.get('name')}\nEmail: ${form.get('email')}\n\n${form.get('message')}\n\nProperty: ${home.title} in ${home.city} (${money(home.price)})`;
+        location.href = `mailto:hello@havenly.example?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      });
+    })();
+  </script>
+</body>
+</html>
